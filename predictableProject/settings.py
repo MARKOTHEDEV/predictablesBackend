@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -128,6 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+"media settings"
+MEDIA_URL = '/media/'
+MEDIA_ROOT =   Path(BASE_DIR,'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -171,3 +177,9 @@ CORS_ALLOW_HEADERS = [
 
 # this is telling DJango that -> HEy use this Model for users not the DJango User
 AUTH_USER_MODEL ='users.CustomUser'
+
+
+
+
+
+django_heroku.settings(locals())
