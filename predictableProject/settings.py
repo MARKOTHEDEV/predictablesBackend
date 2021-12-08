@@ -152,6 +152,7 @@ CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",
 "http://localhost:8000",
 'http://predictables.herokuapp.com',
+"https://predictables.herokuapp.com"
 ]
 
 CORS_ALLOW_METHODS = [
