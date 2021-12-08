@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
      'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -150,6 +151,7 @@ CORS_ALLOWED_ORIGINS = [
 
 "http://localhost:3000",
 "http://localhost:8000",
+'http://predictables.herokuapp.com',
 ]
 
 CORS_ALLOW_METHODS = [
